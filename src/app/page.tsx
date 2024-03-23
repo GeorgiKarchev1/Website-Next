@@ -3,6 +3,9 @@ import React from "react";
 import { AuroraBackground } from "@/app/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import {GridBackgroundDemo} from "@/app/components/ui/Background"
+import { BackgroundGradientAnimation } from "./components/ui/background-gradient-animation";
+import { AuroraBackground2 } from "./components/ui/aurora2-background";
+import {AuroraBackground3} from "./components/ui/aurora3-background"
 export function AuroraBackgroundDemo() {
   return (
     <main>
@@ -28,9 +31,20 @@ export function AuroraBackgroundDemo() {
         </button>
       </motion.div>
     </AuroraBackground >
-    {/* <AuroraBackground>
+    <AuroraBackground3>
+      <h1>DaftoDenkele</h1>
+    </AuroraBackground3>
+
+    {/* <BackgroundGradientAnimation>
+      <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+        <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+          Gradients X Animations
+        </p>
+      </div>
+    </BackgroundGradientAnimation> */}
+    <AuroraBackground2>
       <h1>Projects</h1>
-    </AuroraBackground> */}
+    </AuroraBackground2>
     </main>
   );
 }
