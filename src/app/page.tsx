@@ -2,7 +2,7 @@
 import React from "react";
 import { AuroraBackground } from "@/app/components/ui/aurora-background";
 import { motion } from "framer-motion";
-import { Tabs } from "@/app/components/ui/tabs";
+import {GridBackgroundDemo} from "@/app/components/ui/Background"
 export function AuroraBackgroundDemo() {
   return (
     <main>
@@ -27,19 +27,10 @@ export function AuroraBackgroundDemo() {
           Contact now
         </button>
       </motion.div>
-    </AuroraBackground>
-    <Tabs
-  tabs={[
-    { title: 'Tab 1', value: 'tab1', content: 'Content 1' },
-    { title: 'Tab 2', value: 'tab2', content: 'Content 2' }
-  ]}
-  containerClassName="flex items-center justify-start relative overflow-hidden no-visible-scrollbar max-w-full w-full"
-  tabClassName="px-4 py-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
-  activeTabClassName="absolute inset-0 bg-gray-200 dark:bg-gray-800 rounded-full"
-  contentClassName="mt-32"
-  
-/>
-
+    </AuroraBackground >
+    {/* <AuroraBackground>
+      <h1>Projects</h1>
+    </AuroraBackground> */}
     </main>
   );
 }
