@@ -1,9 +1,5 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
 const svgToDataUri = require("mini-svg-data-uri");
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,46 +15,9 @@ module.exports = {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
-        first: "moveVertical 30s ease infinite",
-        second: "moveInCircle 20s reverse infinite",
-        third: "moveInCircle 40s linear infinite",
-        fourth: "moveHorizontal 40s ease infinite",
-        fifth: "moveInCircle 20s ease infinite",
+        shimmer: "shimmer 2s linear infinite"
       },
       keyframes: {
-        moveHorizontal: {
-          "0%": {
-            transform: "translateX(-50%) translateY(-10%)",
-          },
-          "50%": {
-            transform: "translateX(50%) translateY(10%)",
-          },
-          "100%": {
-            transform: "translateX(-50%) translateY(-10%)",
-          },
-        },
-        moveInCircle: {
-          "0%": {
-            transform: "rotate(0deg)",
-          },
-          "50%": {
-            transform: "rotate(180deg)",
-          },
-          "100%": {
-            transform: "rotate(360deg)",
-          },
-        },
-        moveVertical: {
-          "0%": {
-            transform: "translateY(-50%)",
-          },
-          "50%": {
-            transform: "translateY(50%)",
-          },
-          "100%": {
-            transform: "translateY(-50%)",
-          },
-        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",
@@ -67,9 +26,17 @@ module.exports = {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
+        // Добавете shimmer keyframes тук
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0"
+          },
+          to: {
+            backgroundPosition: "-200% 0"
+          }
+        }
       },
     },
-    // Add your other theme configurations here
   },
   plugins: [
     addVariablesForColors,
